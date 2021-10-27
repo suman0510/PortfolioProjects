@@ -40,7 +40,7 @@ FROM PortfolioProject..covidDeaths
 WHERE location='India'
 ORDER BY 1,2
 
---countries with highest Infection Rate
+--countries with highest Infection Rate---(3rd & 4th  sheet Tableau)
 SELECT Location,MAX(total_cases) AS HIR,population,MAX(round((total_cases/population)*100,3)) AS percentPopulationInfected
 FROM PortfolioProject..covidDeaths
 GROUP BY Location,population
@@ -52,7 +52,7 @@ FROM PortfolioProject..covidDeaths
 GROUP BY Location,population
 ORDER BY percentPopulationDead DESC
 
---things by continent -----------
+--things by continent -----------(2nd sheet Tableau)
 SELECT continent,MAX(cast(total_deaths AS int)) AS totalDeath
 FROM PortfolioProject..covidDeaths
 WHERE continent is not null
@@ -65,7 +65,7 @@ FROM PortfolioProject..covidDeaths
 GROUP BY location
 ORDER BY totalDeath DESC;
  
---GLOBAL stats
+--GLOBAL stats--(1st sheet Tableau)
 SELECT SUM(new_cases) AS totalNewCases,SUM(cast(new_deaths AS int)) AS totalNewDeaths,ROUND(SUM(CAST(new_deaths AS int))/SUM(new_cases)*100,3) AS DeathPercentage
 FROM PortfolioProject..covidDeaths
 WHERE continent IS NOT NULL
