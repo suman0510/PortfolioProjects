@@ -1,4 +1,11 @@
 ----------------------------------EXPLORING DATA-----------------------------------------------
+
+
+---the data to which The queries written is about "Coronavirus (COVID-19) Deaths" and the data is available at:
+----https://ourworldindata.org/covid-deaths
+
+
+
 ------main tables------------------------------------------------------------------------------
 --AS ON 24th OCT 2021----------------------------------------
 
